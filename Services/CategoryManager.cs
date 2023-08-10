@@ -8,6 +8,7 @@ namespace Services
     {
         private readonly IRepositoryManager _manager;
 
+
         public CategoryManager(IRepositoryManager manager)
         {
             _manager = manager;
@@ -15,12 +16,7 @@ namespace Services
 
         public IEnumerable<Category> GetAllCategories(bool trackChanges)
         {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Category> GetAllCategory()
-        {
-            throw new NotImplementedException();
+            return _manager.Category.FindAll(trackChanges);
         }
     }
 }

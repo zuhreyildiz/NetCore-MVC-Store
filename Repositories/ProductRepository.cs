@@ -9,14 +9,7 @@ namespace Repositories
         {
         }
 
-        public object Products { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
         public IQueryable<Product> GetAllProducts(bool trackChanges) => FindAll(trackChanges);
-
-        public IEnumerable<Product> GetAllProducts(object trackChanges)
-        {
-            throw new NotImplementedException();
-        }
 
         public Product? GetOneProduct(int id, bool trackChanges)
         {

@@ -1,0 +1,38 @@
+@model IEnumerable<Product>
+
+<div class="text-center my-5 border-bottom">
+    <div class="display-6">Products</div>
+</div>
+
+<div class="text-center">
+    <div class="d-flex justify-content-end my-3">
+        <a class="btn btn-outline-success" asp-action="Create">
+            <i class="fa fa-plus"></i>
+            Create
+        </a>
+    </div>
+</div>
+
+    <table class="table table-stripped table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Operations</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            @foreach (Product prd in Model)
+            {
+                <tr>
+                    <td>@prd.ProductId</td>
+                    <td>@prd.ProductName</td>
+                    <td>.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
